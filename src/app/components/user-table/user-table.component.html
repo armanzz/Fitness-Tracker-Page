@@ -1,0 +1,39 @@
+<div class="container mx-auto px-4 py-6">
+    <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+      <thead>
+        <tr class="bg-gray-800 text-black">
+          <th class="py-2 px-4">Name</th>
+          <th class="py-2 px-4">Workouts</th>
+          <th class="py-2 px-4">Total Workouts</th>
+          <th class="py-2 px-4">Total Minutes</th>
+          <th class="py-2 px-4">Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of paginatedUsers" class="border-b transition duration-300 ease-in-out hover:bg-gray-200">
+
+          <td class="py-2 px-4">{{ user.name }}</td>
+          <td class="py-2 px-4">
+            <ul>
+              <li *ngFor="let workout of user.workouts">{{ workout.type }} - {{ workout.minutes }} min</li>
+            </ul>
+          </td>
+          <td class="py-2 px-4">{{ user.workouts.length }}</td>
+          <td class="py-2 px-4">{{ getTotalMinutes(user) }}</td>
+          <td class="py-2 px-4">
+            <button (click)="openChartModal(user)" class="p-2 rounded transition transform duration-300 hover:scale-110">
+
+              <fa-icon [icon]="faChartBar" class="text-blue-500"></fa-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="mt-4 flex justify-between items-center">
+      <button (click)="previousPage()" [disabled]="currentPage === 1" class="p-2 bg-gray-500 text-white rounded transition duration-300 hover:bg-gray-700">Previous</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="p-2 bg-gray-500 text-white rounded transition duration-300 hover:bg-gray-700">Next</button>
+    </div>
+  </div>
+  

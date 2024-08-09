@@ -1,0 +1,41 @@
+<nav class="bg-blue-700 shadow-lg p-4 flex justify-between items-center">
+    <h1 class="text-lg font-extrabold text-center mb-6 font-custom">Health Challenge Tracker</h1>
+
+<style>
+  .font-custom {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem; /* Adjust this value to make it smaller or larger */
+  }
+</style>
+
+<!-- Add a link to a Google Font or another font provider -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <div class="flex items-center space-x-4">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="applySearch()"
+        placeholder="Search"
+        class="p-2 rounded border border-gray-300"
+      />
+      <select
+        [(ngModel)]="filterType"
+        (change)="applySearch()"
+        class="p-2 rounded border border-gray-300"
+      >
+        <option value="">All Types</option>
+        <option value="Running">Running</option>
+        <option value="Cycling">Cycling</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Yoga">Yoga</option>
+      </select>
+      <button
+        (click)="openAddUserModal()"
+        class="bg-white text-blue-700 p-2 rounded shadow"
+      >
+        Add User
+      </button>
+    </div>
+  </nav>
+  

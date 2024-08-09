@@ -1,0 +1,29 @@
+<mat-dialog-content class="p-4">
+  <form #addUserForm="ngForm" class="space-y-4">
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+      <input type="text" [(ngModel)]="userData.name" name="name" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+    </div>
+    <div *ngFor="let workout of userData.workouts; let i = index" class="space-y-2">
+      <div>
+        <label for="workoutType{{i}}" class="block text-sm font-medium text-gray-700">Workout Type</label>
+        <select [(ngModel)]="workout.type" name="type{{i}}" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+          <option value="Running">Running</option>
+          <option value="Cycling">Cycling</option>
+          <option value="Swimming">Swimming</option>
+          <option value="Yoga">Yoga</option>
+        </select>
+      </div>
+      <div>
+        <label for="workoutMinutes{{i}}" class="block text-sm font-medium text-gray-700">Minutes</label>
+        <input type="number" [(ngModel)]="workout.minutes" name="minutes{{i}}" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+      </div>
+      <button type="button" (click)="removeWorkout(i)" class="mt-2 bg-red-500 text-white p-1 rounded">Remove</button>
+    </div>
+    <button type="button" (click)="addWorkout()" class="mt-4 bg-blue-500 text-white p-2 rounded">Add Workout</button>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="flex justify-end space-x-2">
+  <button mat-button (click)="onAddUser()" class="bg-blue-500 text-white p-2 rounded">Add</button>
+  <button mat-button (click)="onClose()" class="bg-gray-500 text-white p-2 rounded">Cancel</button>
+</mat-dialog-actions>

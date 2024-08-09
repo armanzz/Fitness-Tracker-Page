@@ -36,9 +36,10 @@ Prerequisites
     Node.js (version 14.x or higher)
     Angular CLI (version 12.x or higher)
 
-# Steps:
-  git clone https://github.com/your-username/health-challenge.git
-  cd Fitness-Tracker-Page
+# Clone the Repository:
+    git clone https://github.com/your-username/health-challenge.git
+  
+    cd Fitness-Tracker-Page
 
 # Install dependencies & Start Deployment Server:
     npm install

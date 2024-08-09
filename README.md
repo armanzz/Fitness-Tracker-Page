@@ -37,7 +37,7 @@ Prerequisites
     Angular CLI (version 12.x or higher)
 
 # Clone the Repository:
-    git clone https://github.com/your-username/health-challenge.git
+    git clone https://github.com/armanzz/Fitness-Tracker-Page.git
   
     cd Fitness-Tracker-Page
 

@@ -36,20 +36,17 @@ Prerequisites
     Node.js (version 14.x or higher)
     Angular CLI (version 12.x or higher)
 
-# Steps
+# Steps:
+  git clone https://github.com/your-username/health-challenge.git
+  cd Fitness-Tracker-Page
 
-Clone the repository:
-    1. git clone https://github.com/your-username/health-challenge.git
-    2. cd health-challenge
+# Install dependencies & Start Deployment Server:: 
+    npm install
+    ng serve
 
-Install dependencies:
-    1. npm install
-
-To Start Deployment Server:
-    >> ng serve
 
 # Test:
-    >> ng test --code-coverage
+    ng test --code-coverage
 
 
 ## Coverage Report
@@ -57,30 +54,15 @@ To Start Deployment Server:
 Chrome 127.0.0.0 (Windows 10): Executed 28 of 28 SUCCESS (0.356 secs / 0.302 secs)
 TOTAL: 28 SUCCESS
 
-=============================== Coverage summary ===============================
+
 Statements   : 72.85% ( 51/70 )
 Branches     : 78.94% ( 15/19 )
 Functions    : 76.19% ( 16/21 )
 Lines        : 71.87% ( 46/64 )
-================================================================================
 
 
 
-# Directory Structure:
 
-src/
-├── app/
-│   ├── components/
-│   │   ├── user-table/
-│   │   └── add-user-modal/
-│   │   └── chart-modal/
-│   │   └── navbar/
-│   ├── services/
-│   ├── splash-screen/
-│   └── app.component.ts
-├── environments/
-│   └── ...
-└── index.html
 
 
 

@@ -52,6 +52,10 @@ Prerequisites
 
 ## Coverage Report
 
+
+![image](https://github.com/user-attachments/assets/a9001050-d435-430d-8954-1d4ca147fcce)
+
+
 Chrome 127.0.0.0 (Windows 10): Executed 28 of 28 SUCCESS (0.356 secs / 0.302 secs)
 TOTAL: 28 SUCCESS
 

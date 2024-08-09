@@ -40,7 +40,7 @@ Prerequisites
   git clone https://github.com/your-username/health-challenge.git
   cd Fitness-Tracker-Page
 
-# Install dependencies & Start Deployment Server:: 
+# Install dependencies & Start Deployment Server:
     npm install
     ng serve
 

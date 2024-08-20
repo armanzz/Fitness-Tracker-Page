@@ -23,6 +23,7 @@ Frontend:
 UI Components:
     Angular Material
     FontAwesome
+    NgxCharts
 
 Testing:
     Jasmine
